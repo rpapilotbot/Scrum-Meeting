@@ -1,0 +1,160 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Sign_out_For_Google_Meet" this:Sign_out_For_Google_Meet.in_signoutUrl="https://calendar.google.com/calendar/u/0/r?hl=en-GB" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="in_signoutUrl" Type="InArgument(x:String)" />
+  </x:Members>
+  <mva:VisualBasic.Settings>
+    <x:Null />
+  </mva:VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>925,1339</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>Sign_out_For_Google_Meet_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap2010:Annotation.AnnotationText="Sign out from the Google Meet account." DisplayName="Sign_out_For_Google_Meet" sap:VirtualizedContainerService.HintSize="514,1274" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:LogMessage DisplayName="Starting sign out process - Log Message" sap:VirtualizedContainerService.HintSize="472,91" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Started sign out process&quot;]" />
+    <TryCatch DisplayName="Sign out sequence - Try Catch" sap:VirtualizedContainerService.HintSize="472,889" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+      <TryCatch.Try>
+        <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" DisplayName="Use Browser Chrome: Google Calendar - today" sap:VirtualizedContainerService.HintSize="434,662" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="7692cb5f-a880-4b9a-9d86-2240af69ea24" Version="V2">
+          <uix:NApplicationCard.Body>
+            <ActivityAction x:TypeArguments="x:Object">
+              <ActivityAction.Argument>
+                <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+              </ActivityAction.Argument>
+              <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,446" sap2010:WorkflowViewState.IdRef="Sequence_2">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <uix:NClick ClickType="Single" DisplayName="Click 'Calendar'" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NClick_1" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="7692cb5f-a880-4b9a-9d86-2240af69ea24" Version="V1">
+                  <uix:NClick.Target>
+                    <uix:TargetAnchorable BrowserURL="https://calendar.google.com/calendar/u/0/r?hl=en" DesignTimeRectangle="1558, 144, 32, 32" ElementType="Icon" FriendlyName="'IMG'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;header&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;a&amp;gt;img' tag='IMG' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' tag='IMG' class='gb_Ba gbii' aaname='' /&gt;" Guid="e86d5293-22f3-4088-9b98-f04a01be3ec6" ImageBase64="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" InformativeScreenshot="1c5efe2e88706f512acbca39e5a75e33.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Google Calendar - Week of June 26, 2022' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Visibility="Interactive">
+                      <uix:TargetAnchorable.Anchors>
+                        <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                          <uix:Target DesignTimeRectangle="116, 149, 91, 24" ElementType="Text" FriendlyName="'Calendar'" FullSelectorArgument="&lt;webctrl aaname='Calendar' css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;header&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;a&amp;gt;span' parentid='gb' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Calendar' type='' parentid='gb' tag='SPAN' class='gb_4d gb_1c' check:innerText='Calendar' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAF8AAAAcCAYAAAAHgGM3AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAQTSURBVGhD7ZjvS1pRGMf3n/ZiBhWoFOGQRAQRxJBGFCLkYPrCYI6xRQbNFxOimKyYG0UwYiFJpDBuhBEX4rvn/PL643qvV5P75n7hgJ77nHPP8/E5z3mOr+DJNXnwXZQH30V58F2UB99FOYCvQ7s6wpe3CawuLWDutWi+YAjJTBkXN7q0m0RnyPP5Yqjcyi6X1dqLcf/ie7Nb0HjwtUscxP1d4KNadKcG7VmOcSQPvrk6BCYoAS/EUDy8RPPBiHK9fYWTQgqr8/IH2G3QHnEqD/6wnm9RiQmogfWvaFpRbXxGOlFGy4v8sWUJX6uk4GNQ3pTQnAjquPLgD4iifk1EfeZ4wsNUb6NOKSkaVOeFH4G1FErHbWmgNBp+5+8RivEQFmVa8y1FkC7U0OpbklqrGK99LyL9xi8CZ96PcLKI+uArmZ7vcX2YRVKtT9ne6ebwHfuTxQUecb23hbAsUgKFS2ljBf/pCBk5QX2SqG/TeHVWmLRA5gwdaToKfms/IQCateAWfnR9VvAjyGVGjAkSCOOFPKWerC8P27E2n0B+O8I/d+FP5M8W8jv978ifShPSaPi3ZcTZgPBntGSXI8koCUcLqDceRd8zRdRxDlEexcso/hLdpvDPCwiwvvkI8sd0iKtI7zRQ34lwwL7kN2i809ilrMV3L6FxeyqPz8vYlNDCHxrcmqm5K+CK+W+h8wDToTdqyId75lLwJ/JH9Geqan5STyDPDr6FOtUNvrDF92oLDsLX8WNTLD5zJB3t0z2qcfY8ggPO04C/uF3riUAh7TDBn83Rj8WfPdWQUcDOuUm/OjXk/GK+cXL+aH9o/KfR42eXdpjoflClNNB7KVtcSSD3VuTTOdqqQoPwfyMvc7xdS1fuyd6A37utuzrNCvs1qsbY9585kZrUdxM1d0N8TB/8if0x1+wO3BvaOXYARy7WiBy7JuA4hK++d98/rKEDdyp/zGUBf5pS00gbvnDOyJFMnTauP6ZsFqsinw7VJ25go1lH/rT+mMsSPqsIDqRTtpcsvYFqOkWHDluYNYzWJ7ttajhrlTMNOYTfzfkRfLniFv0ayvnT+mMua/hMvSWW2d8LDw1c7GURXVA2FK30XMELrJfx55+0Z5XKu5hRClot9qqEMO9bxuaHM7TUDtAf0TwtYXPFj9U4RSEvNx3CJzmrdl7AHxPZw2fSfqO0Zv/Hmm8lixO6oHBZ5Mh4bLxIaVU2RLlp2vxI7itj5/Ct6/wQkrGBA/cF/BnUePC5ev5S7t7w2I0zhCjdCqvnJldIqg4qVAkE5K7wrdJt8DvZDR14Fou9q6GUNOaYW1jm72O3UEMTwOeiXVQtIEm7iEev3Q33JfzpkQP4nl5aHnwX5cF3UR58F+XBd1EefBflwXdNwH/UcS2D8qsOjQAAAABJRU5ErkJggg==" SearchSteps="Selector, FuzzySelector, Image" />
+                        </scg:List>
+                      </uix:TargetAnchorable.Anchors>
+                    </uix:TargetAnchorable>
+                  </uix:NClick.Target>
+                </uix:NClick>
+                <uix:NClick ClickType="Single" DisplayName="Click 'Sign out'" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NClick_2" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="7692cb5f-a880-4b9a-9d86-2240af69ea24" Version="V1">
+                  <uix:NClick.Target>
+                    <uix:TargetAnchorable BrowserURL="https://ogs.google.com/u/0/widget/account?origin=https%3A%2F%2Fcalendar.google.com&amp;cn=account&amp;pid=24&amp;spid=24&amp;hl=en" DesignTimeRectangle="1363, 665, 105, 38" ElementType="Text" FriendlyName="'Sign out'" FullSelectorArgument="&lt;webctrl aria-role='presentation' src='https://ogs.google.com/u/0/widget/account?origin=https%3A%2F%2Fc*' tag='IFRAME' /&gt;&lt;webctrl aaname='Sign out*' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aria-role='presentation' src='https://ogs.google.com/u/0/widget/account?origin=https%3A%2F%2Fc*' tag='IFRAME' /&gt;&lt;webctrl aaname='Sign out' tag='A' type='' class='z8t5Oc BvDXcd OtBgcb' check:innerText='Sign out' /&gt;" Guid="09671a03-6259-4d4e-8d65-06388a6e25f3" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAG0AAAAqCAYAAAC5pdWCAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAPFSURBVHhe7ZuJS1RBHMf7wyLM1CUlOwzLFMvKEIzCqCStDLEoW4/WvDKlyywqKyJJMm8r7SDTgjwiL3SF3GU9dlddf/kd3zzfrsZuwfJ22PnAsOzMvGN/n5nfzFt4G0giHFKagLhJczicNDY+Sf2DQ9Q38EuWAChwASdww1GloRIdrFYbuVwupVaiN3ABJ3DDxanSYBONksAEbuAIqNJgUs6wwAVu4Aio0pA/JYENdySlCYSUJiBSmoBIaQIipQmIlCYgUpqASGkCops0u8NB5RWVZIiKpk2h4ZSckko9vb2sbWlpabntJsXExtHQ8DCrk6yiizQuJcwQSSVlN6ipuYWOHk+jHTGxNDj4k7VXVFbR3vhEGhkZVY4KTDq7PlDU9l3UPzCg1PgfXaTZ7XY6lZ5BV4x5TBCw2WwsAJiBIhE00hYXF+lyrpHNrI+fPpNLEafl0ZNaik88QL+npth3p9NJ1TUPKCp6p5pOs3MuqX0QNATvbnUNHUxOoY0hW2j3nn3U1t6hDgxPpqenyVRc4paiu7/2qP2N+YVscGGQAT7YUA/wievwou3rT3SRBqYsFkrPOMt+LORV3bpNs7OzSqu7NJ5OQ8IMdDWvgKVTSEegPaXxlFv/uoFJiEvYTxNms3LWVWaWr4Xr45j7NQ/ZOU+fyWTHd7x9x/p4k/ajr4/dd0TkNna/WJMxIP2NbtIAZIyOjTEhmEHYePA0o5WGoCP4d+5Vq7NgYWGB8gqurZGGIPI+X7q7mQTMZk/ed3axa/Z++67UrMzmzHNZqihv0kDQpEcwPz/PCsdsnqTEpENUYCpi37XSuBAESIu3Pn87DmiP1aKtl9I0YBuPWaWdOXNzc3TiZLoaEG3wxicmKDYuwaeZ5qs0X2da6rE0mpmZYe0Wi5Wtl0EpDXm/qLjUbY3Kys6hzeEGamxqZn200iDKc01D//XWNF+l+bKm1b2qZ9fA+tnwppE9lmAN1kpD6sV95xeaqKW1jZ3X3+giDWBUP659yjYhCASeyZqXfzTfSXqmL+3uEfIuXs6l0vKK/5YGvO0eV/4AWHmeRMk15tP5C9lu0nBfhabr7J6SDh8hq9WqtPgP3aT9K3iOgwQeUHwWl5W7pa9gQQhp2nSKUd3a1s7SZGjEVqp99lzpFTwIM9N4euTpFA/OL17WsQ1JsCGMNMkqUpqASGkCIqUJiJQmIFKagEhpAiKlCcgaafJVp8Bm3Ved5EuFgc26LxXK13cDE7iAE7hZ8/ouQCVsogPypyz6F7iAEy4MuEmTiIGUJhxEfwDhh1o23X5g9AAAAABJRU5ErkJggg==" InformativeScreenshot="3f181db86479124bff253ae615f245b7.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Google Calendar - Week of June 26, 2022' /&gt;" SearchSteps="Selector, FuzzySelector" Visibility="Interactive">
+                      <uix:TargetAnchorable.Anchors>
+                        <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                          <uix:Target DesignTimeRectangle="1239, 600, 354, 48" ElementType="Text" FriendlyName="'Add another account'" FullSelectorArgument="&lt;webctrl aria-role='presentation' src='https://ogs.google.com/u/0/widget/account?origin=https%3A%2F%2Fc*' tag='IFRAME' /&gt;&lt;webctrl aaname='Add another account' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aria-role='presentation' src='https://ogs.google.com/u/0/widget/account?origin=https%3A%2F%2Fc*' tag='IFRAME' /&gt;&lt;webctrl aaname='Add another account' tag='A' type='' class='SFWbIb tqFCve OtBgcb' check:innerText='Add another account' /&gt;" ImageBase64="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" SearchSteps="Selector, FuzzySelector, Image" />
+                        </scg:List>
+                      </uix:TargetAnchorable.Anchors>
+                    </uix:TargetAnchorable>
+                  </uix:NClick.Target>
+                </uix:NClick>
+              </Sequence>
+            </ActivityAction>
+          </uix:NApplicationCard.Body>
+          <uix:NApplicationCard.TargetApp>
+            <uix:TargetApp Area="-8, -8, 1616, 876" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAISSURBVFhH7ZQ9L0NRGMfv4CuI2mxdDVpGKZ+ADyAmNroapIkwsRpMRp0NDKQTK/ESbxGiIYqQxluE5Lq/o0+d3j7tvdIWQ//JP7c999zz+5/7PPc4vTOvQ4npx4fE9JPbSLeP7PidiYxudTjezTP/5EZYCYAzBFAfqLcVuHEzwP8NUG+9r7WobgYIFSD//OGubuXdhfVbc724eyvc+RZz0pv37uzytZnjlwbHgQGAxScOy5oHmGg3++JGk/sl93nGDqrBcWCAgblTs+Bk+spd8XbGlf/R8X2zayDAo8k9b/c5d+PoqTiHEMxBGhxXDcDiLDTohbA1mb404yvbefPK+W2/ETS2mC0Z1+A48A3sZl/Lai5QAgiIndta8sCMExZpcByqCf0anj83ixNOwnC1JcG4Ig2OfxxAyhKfOCj+Nz3g9YR8AVIiO5gGxz8O0D91Yha2a05zEkigNKQ0L2VCGhyHDkA3jy1eFHaVK4yWij6gLMzlC5C3hDQ4DhWA1yw75xMLkpTADqrBcWAADhk5iCrt3JbA+6eOCyNf0uA4MICccISgo237T0OpO3A5gEQaHAcGYMFKlk8MfdX9wJTID0caHIduwjDSwCINjusaoJo0OG4GcCKpHldz19JgXX3TFytzLhFP/VkAA0caHGuL1GIVjjQ41hapxSoctaW6H34rQBkctaZinR7wrNEBVLjjOJ+CyJ/ybfwoJgAAAABJRU5ErkJggg==" InformativeScreenshot="810ffb7362d3bde29e87f3808b6d02f7.png" Selector="&lt;html app='chrome.exe' title='Google Calendar - Wednesday, 29 June 2022, today' /&gt;" Url="[in_signoutUrl]" />
+          </uix:NApplicationCard.TargetApp>
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+        </uix:NApplicationCard>
+      </TryCatch.Try>
+      <TryCatch.Catches>
+        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="438,21" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ActivityAction x:TypeArguments="s:Exception">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+            </ActivityAction.Argument>
+            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Error" Message="[exception.Message]" />
+          </ActivityAction>
+        </Catch>
+      </TryCatch.Catches>
+    </TryCatch>
+    <ui:LogMessage DisplayName="Ending sign out process - Log Message" sap:VirtualizedContainerService.HintSize="472,91" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Ended sign out process&quot;]" />
+  </Sequence>
+</Activity>

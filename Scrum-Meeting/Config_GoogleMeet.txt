@@ -1,0 +1,11 @@
+{
+	"SignInUrl": "https://apps.google.com/meet/",
+	"SignOutUrl": "https://calendar.google.com/calendar/u/0/r?hl=en-GB",
+	"GoogleMeetUrl": "https://meet.google.com/",
+        "MeetingTitle": "Scrum Meeting - Tiliconveli Team",
+        "JoinGoogleMeetUrl": "https://calendar.google.com/calendar/u/0/",
+	"GuestArray":["sornalakshmie5@gmail.com"],
+	"StartTime": "10:45am",
+	"EndTime": "11:00am",
+	"OrganizerCredentials": "GoogleCred",
+}
