@@ -1,14 +1,14 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Sign_out_For_Google_Meet" this:Sign_out_For_Google_Meet.in_signoutUrl="https://calendar.google.com/calendar/u/0/r?hl=en-GB" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Sign_out_For_Google_Meet" this:Sign_out_For_Google_Meet.in_signoutUrl="https://calendar.google.com/calendar/u/0/r?hl=en-GB" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="in_signoutUrl" Type="InArgument(x:String)" />
   </x:Members>
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>925,1339</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1608,1639</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Sign_out_For_Google_Meet_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
-    <sco:Collection x:TypeArguments="x:String">
+    <scg:List x:TypeArguments="x:String" Capacity="32">
       <x:String>System.Activities</x:String>
       <x:String>System.Activities.Statements</x:String>
       <x:String>System.Activities.Expressions</x:String>
@@ -41,10 +41,10 @@
       <x:String>System.Reflection</x:String>
       <x:String>System.Runtime.Serialization</x:String>
       <x:String>UiPath.UIAutomationNext.Contracts</x:String>
-    </sco:Collection>
+    </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
-    <sco:Collection x:TypeArguments="AssemblyReference">
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="33">
       <AssemblyReference>System.Activities</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>mscorlib</AssemblyReference>
@@ -78,31 +78,34 @@
       <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
       <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
       <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
-    </sco:Collection>
+    </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Sign out from the Google Meet account." DisplayName="Sign_out_For_Google_Meet" sap:VirtualizedContainerService.HintSize="514,1274" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="Sign out from the Google Meet account." DisplayName="Sign_out_For_Google_Meet" sap:VirtualizedContainerService.HintSize="590,1574" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="Starting sign out process - Log Message" sap:VirtualizedContainerService.HintSize="472,91" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Started sign out process&quot;]" />
-    <TryCatch DisplayName="Sign out sequence - Try Catch" sap:VirtualizedContainerService.HintSize="472,889" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+    <ui:LogMessage DisplayName="Starting sign out process - Log Message" sap:VirtualizedContainerService.HintSize="548,91" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Started sign out process&quot;]" />
+    <TryCatch DisplayName="Sign out sequence - Try Catch" sap:VirtualizedContainerService.HintSize="548,1189" sap2010:WorkflowViewState.IdRef="TryCatch_1">
       <TryCatch.Try>
-        <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" DisplayName="Use Browser Chrome: Google Calendar - today" sap:VirtualizedContainerService.HintSize="434,662" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="7692cb5f-a880-4b9a-9d86-2240af69ea24" Version="V2">
+        <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" DisplayName="Use Browser Chrome: Google Calendar - today" sap:VirtualizedContainerService.HintSize="510,962" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" ScopeGuid="7692cb5f-a880-4b9a-9d86-2240af69ea24" Version="V2">
           <uix:NApplicationCard.Body>
             <ActivityAction x:TypeArguments="x:Object">
               <ActivityAction.Argument>
                 <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
               </ActivityAction.Argument>
-              <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,446" sap2010:WorkflowViewState.IdRef="Sequence_2">
+              <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="476,746" sap2010:WorkflowViewState.IdRef="Sequence_2">
+                <Sequence.Variables>
+                  <Variable x:TypeArguments="ui:Browser" Name="str_attachURL" />
+                </Sequence.Variables>
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <uix:NClick ClickType="Single" DisplayName="Click 'Calendar'" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NClick_1" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="7692cb5f-a880-4b9a-9d86-2240af69ea24" Version="V1">
+                <uix:NClick ClickType="Single" DisplayName="Click 'Calendar'" sap:VirtualizedContainerService.HintSize="434,156" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="7692cb5f-a880-4b9a-9d86-2240af69ea24" Version="V1">
                   <uix:NClick.Target>
                     <uix:TargetAnchorable BrowserURL="https://calendar.google.com/calendar/u/0/r?hl=en" DesignTimeRectangle="1558, 144, 32, 32" ElementType="Icon" FriendlyName="'IMG'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;header&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;a&amp;gt;img' tag='IMG' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' tag='IMG' class='gb_Ba gbii' aaname='' /&gt;" Guid="e86d5293-22f3-4088-9b98-f04a01be3ec6" ImageBase64="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" InformativeScreenshot="1c5efe2e88706f512acbca39e5a75e33.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Google Calendar - Week of June 26, 2022' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Visibility="Interactive">
                       <uix:TargetAnchorable.Anchors>
@@ -113,7 +116,7 @@
                     </uix:TargetAnchorable>
                   </uix:NClick.Target>
                 </uix:NClick>
-                <uix:NClick ClickType="Single" DisplayName="Click 'Sign out'" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NClick_2" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="7692cb5f-a880-4b9a-9d86-2240af69ea24" Version="V1">
+                <uix:NClick ClickType="Single" DisplayName="Click 'Sign out'" sap:VirtualizedContainerService.HintSize="434,156" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="7692cb5f-a880-4b9a-9d86-2240af69ea24" Version="V1">
                   <uix:NClick.Target>
                     <uix:TargetAnchorable BrowserURL="https://ogs.google.com/u/0/widget/account?origin=https%3A%2F%2Fcalendar.google.com&amp;cn=account&amp;pid=24&amp;spid=24&amp;hl=en" DesignTimeRectangle="1363, 665, 105, 38" ElementType="Text" FriendlyName="'Sign out'" FullSelectorArgument="&lt;webctrl aria-role='presentation' src='https://ogs.google.com/u/0/widget/account?origin=https%3A%2F%2Fc*' tag='IFRAME' /&gt;&lt;webctrl aaname='Sign out*' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aria-role='presentation' src='https://ogs.google.com/u/0/widget/account?origin=https%3A%2F%2Fc*' tag='IFRAME' /&gt;&lt;webctrl aaname='Sign out' tag='A' type='' class='z8t5Oc BvDXcd OtBgcb' check:innerText='Sign out' /&gt;" Guid="09671a03-6259-4d4e-8d65-06388a6e25f3" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAG0AAAAqCAYAAAC5pdWCAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAPFSURBVHhe7ZuJS1RBHMf7wyLM1CUlOwzLFMvKEIzCqCStDLEoW4/WvDKlyywqKyJJMm8r7SDTgjwiL3SF3GU9dlddf/kd3zzfrsZuwfJ22PnAsOzMvGN/n5nfzFt4G0giHFKagLhJczicNDY+Sf2DQ9Q38EuWAChwASdww1GloRIdrFYbuVwupVaiN3ABJ3DDxanSYBONksAEbuAIqNJgUs6wwAVu4Aio0pA/JYENdySlCYSUJiBSmoBIaQIipQmIlCYgUpqASGkCops0u8NB5RWVZIiKpk2h4ZSckko9vb2sbWlpabntJsXExtHQ8DCrk6yiizQuJcwQSSVlN6ipuYWOHk+jHTGxNDj4k7VXVFbR3vhEGhkZVY4KTDq7PlDU9l3UPzCg1PgfXaTZ7XY6lZ5BV4x5TBCw2WwsAJiBIhE00hYXF+lyrpHNrI+fPpNLEafl0ZNaik88QL+npth3p9NJ1TUPKCp6p5pOs3MuqX0QNATvbnUNHUxOoY0hW2j3nn3U1t6hDgxPpqenyVRc4paiu7/2qP2N+YVscGGQAT7YUA/wievwou3rT3SRBqYsFkrPOMt+LORV3bpNs7OzSqu7NJ5OQ8IMdDWvgKVTSEegPaXxlFv/uoFJiEvYTxNms3LWVWaWr4Xr45j7NQ/ZOU+fyWTHd7x9x/p4k/ajr4/dd0TkNna/WJMxIP2NbtIAZIyOjTEhmEHYePA0o5WGoCP4d+5Vq7NgYWGB8gqurZGGIPI+X7q7mQTMZk/ed3axa/Z++67UrMzmzHNZqihv0kDQpEcwPz/PCsdsnqTEpENUYCpi37XSuBAESIu3Pn87DmiP1aKtl9I0YBuPWaWdOXNzc3TiZLoaEG3wxicmKDYuwaeZ5qs0X2da6rE0mpmZYe0Wi5Wtl0EpDXm/qLjUbY3Kys6hzeEGamxqZn200iDKc01D//XWNF+l+bKm1b2qZ9fA+tnwppE9lmAN1kpD6sV95xeaqKW1jZ3X3+giDWBUP659yjYhCASeyZqXfzTfSXqmL+3uEfIuXs6l0vKK/5YGvO0eV/4AWHmeRMk15tP5C9lu0nBfhabr7J6SDh8hq9WqtPgP3aT9K3iOgwQeUHwWl5W7pa9gQQhp2nSKUd3a1s7SZGjEVqp99lzpFTwIM9N4euTpFA/OL17WsQ1JsCGMNMkqUpqASGkCIqUJiJQmIFKagEhpAiKlCcgaafJVp8Bm3Ved5EuFgc26LxXK13cDE7iAE7hZ8/ouQCVsogPypyz6F7iAEy4MuEmTiIGUJhxEfwDhh1o23X5g9AAAAABJRU5ErkJggg==" InformativeScreenshot="3f181db86479124bff253ae615f245b7.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Google Calendar - Week of June 26, 2022' /&gt;" SearchSteps="Selector, FuzzySelector" Visibility="Interactive">
                       <uix:TargetAnchorable.Anchors>
@@ -124,6 +127,23 @@
                     </uix:TargetAnchorable>
                   </uix:NClick.Target>
                 </uix:NClick>
+                <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" BrowserType="Chrome" DisplayName="Attach Browser 'chrome.exe Google'" sap:VirtualizedContainerService.HintSize="434,260" sap2010:WorkflowViewState.IdRef="BrowserScope_1" InformativeScreenshot="1f38d864878eefb9104a63317dfd7aed" Selector="&lt;html app='chrome.exe' title='Google Calendar - *' /&gt;" UiBrowser="[str_attachURL]">
+                  <ui:BrowserScope.Body>
+                    <ActivityAction x:TypeArguments="x:Object">
+                      <ActivityAction.Argument>
+                        <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
+                      </ActivityAction.Argument>
+                      <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="242,114" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <ui:CloseTab Browser="[str_attachURL]" DisplayName="Close Tab" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="CloseTab_1" />
+                      </Sequence>
+                    </ActivityAction>
+                  </ui:BrowserScope.Body>
+                </ui:BrowserScope>
               </Sequence>
             </ActivityAction>
           </uix:NApplicationCard.Body>
@@ -139,7 +159,7 @@
         </uix:NApplicationCard>
       </TryCatch.Try>
       <TryCatch.Catches>
-        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="438,21" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="514,21" sap2010:WorkflowViewState.IdRef="Catch`1_1">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -155,6 +175,6 @@
         </Catch>
       </TryCatch.Catches>
     </TryCatch>
-    <ui:LogMessage DisplayName="Ending sign out process - Log Message" sap:VirtualizedContainerService.HintSize="472,91" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Ended sign out process&quot;]" />
+    <ui:LogMessage DisplayName="Ending sign out process - Log Message" sap:VirtualizedContainerService.HintSize="548,91" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Ended sign out process&quot;]" />
   </Sequence>
 </Activity>

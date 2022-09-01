@@ -8,7 +8,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1238,2934</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1208,3626</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Sign_In_For_Google_Meet_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="34">
@@ -82,9 +82,10 @@
       <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
       <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
       <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Sign in to google meet to schedule a meeting." DisplayName="Sign_In_For_Google_Meet" sap:VirtualizedContainerService.HintSize="836,2869" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="Sign in to google meet to schedule a meeting." DisplayName="Sign_In_For_Google_Meet" sap:VirtualizedContainerService.HintSize="836,3561" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -92,18 +93,18 @@
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="794,91" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;SIGNING INTO THE GOOGLE MEET  &quot;]" />
-    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="794,2484" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="794,3176" sap2010:WorkflowViewState.IdRef="TryCatch_1">
       <TryCatch.Variables>
         <Variable x:TypeArguments="x:Boolean" Name="bool_googleAcount" />
       </TryCatch.Variables>
       <TryCatch.Try>
-        <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Chrome: Google Meet (formerly Hangouts Meet) - Free Video Meetings" sap:VirtualizedContainerService.HintSize="756,2235" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="Simulate" ScopeGuid="ed9f199c-b9c3-4836-9810-b0d74c393375" Version="V2">
+        <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Chrome: Google Meet (formerly Hangouts Meet) - Free Video Meetings" sap:VirtualizedContainerService.HintSize="756,2827" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="Simulate" ScopeGuid="ed9f199c-b9c3-4836-9810-b0d74c393375" Version="V2">
           <uix:NApplicationCard.Body>
             <ActivityAction x:TypeArguments="x:Object">
               <ActivityAction.Argument>
                 <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
               </ActivityAction.Argument>
-              <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="722,2019" sap2010:WorkflowViewState.IdRef="Sequence_2">
+              <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="722,2611" sap2010:WorkflowViewState.IdRef="Sequence_2">
                 <Sequence.Variables>
                   <Variable x:TypeArguments="x:Boolean" Name="isLoggedIn" />
                 </Sequence.Variables>
@@ -118,7 +119,7 @@
                     <uix:TargetAnchorable BrowserURL="https://apps.google.com/meet/" DesignTimeRectangle="1456, 132, 77, 48" ElementType="Text" FriendlyName="'Sign in'" FullSelectorArgument="&lt;webctrl aaname='             Sign in         ' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='             Sign in         ' tag='A' type='' class='glue-header__link ' check:innerText='Sign in' /&gt;" Guid="9611ca60-f693-4e96-881c-33ee97c4f7a5" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAFEAAAA0CAYAAADyttTfAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAO9SURBVHhe7ZvvS9tAGMf3n/piLcigFoc4pFIKZTA6ZCJKEZY3LawDAzILHWhfTJCJxYqd2A27sm5MiimMOol0gfrd3fVam9SyzTydbj4fOOw9uSSXj8/9yIvcu7i4ABd/5R4Y37BEn7RaP1iiH6TASvUzS/TDcd1Cs/mdJfpBZmG73WaJfjj6WFN/WaIPWCIBLJEAlkgASySAJRLAEglgiQSwRAJYIgEskQCWSACpRPvTFtaWEohGEjDSG6g19QHFOSpZA6nsAWwdGSntOnbTBszNug6MDjKJVvYxAvfHMdZfgrMwD51Og3oOcRWPIT/65wKKy7ofyyjr0Kigkdh8gznZ4UjmMvu+vEI8OI5AfAOWCpyjtp6BuV79S5nYQGnFwNpOQwdGB43EowwmhMToqjvF7Oap/tXBOTuFfaYzsw+nUUV5p4DSYR1OWwRa5+Lc885viS3OE3XFN0/boThwxP1tu3u//rqDZvUAJXGdytfB/vwpNBJbBSRF1o2FnyH/3i3ukjryEZmtOZ2ZApEtu0vT7mkgvIzX6VnXsC8n5bFFrK26p4zAjInaUJF7SMl2yT13fd7E63iodw1ZoitV3eZ6kM2JdtHAlBQpOhV4EIOR3YPV0gcVgxKtbEy1n3iaQ+VEZMlJFZs9qV6JooQXsVltdNotTKrYXH7YP22IRFEmFsSiJ+5nVTeQDMtYAtuuRfDPIJOoaH7BdjqBmQf6oYPTSBX1MByQ+AGZkKg/MnHsyqZTbMbl+V6Jk8i869QV3Xm4J8nLEImhNCp997PzCdXXVFEHrgGtxB4OrLcGojIzg4vYVRnpkdjaQnKIhOOX01dI7F6ni1eSlyES57dE7/rQq/jNS2wLacUDWJ75yVqVc5vo4L6seTNRP9RSQdX6KT8X8QGJ3q3KNSV6298WiccrHVnxrH5qTe2FzCgxDA9lzStR12Wm9u957AIMOczvmkTYooNqgg4hmsxhe2cL+WSss0D05jyvRDHo9w21NRobjyGZziG/sojouFiY1AJ11yRKGgVkIu6tQyCSRqm31x2UKLH3Tcw91OcEQ4inD1Bblav25Yp5dyR2URvj/k3uL2gNtistXSXt9kIv8bdxUHkxK4b8JFI7l3s9+8jsvC4uFNyr6C3mBiUKenOpkBaexlRYTwfizWfbvUbdam5WosRpoJzNwHgSQ/TJMkz5pvOvpKDm5iX+B7BEAlgiASyRAJZIAEskgCUSwBIJYIkEsEQCWCIBLJEA/hiIAP4sjQD+QJII/lSXCJboG+Antg0euWaAk7UAAAAASUVORK5CYII=" InformativeScreenshot="15aa6ab6840d6df44307e2fd4619a221.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Google Meet (formerly Hangouts Meet) - Free Video Meetings' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive" />
                   </uix:NClick.Target>
                 </uix:NClick>
-                <uix:NCheckState Exists="{x:Null}" DisplayName="Check App State 'Meet'" sap:VirtualizedContainerService.HintSize="680,989" sap2010:WorkflowViewState.IdRef="NCheckState_2" ScopeIdentifier="ed9f199c-b9c3-4836-9810-b0d74c393375" Version="V1">
+                <uix:NCheckState Exists="{x:Null}" DisplayName="Check App State 'Meet'" sap:VirtualizedContainerService.HintSize="680,1029" sap2010:WorkflowViewState.IdRef="NCheckState_2" ScopeIdentifier="ed9f199c-b9c3-4836-9810-b0d74c393375" Version="V1">
                   <uix:NCheckState.IfExists>
                     <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="376,773" sap2010:WorkflowViewState.IdRef="Sequence_5">
                       <sap:WorkflowViewStateService.ViewState>
@@ -350,7 +351,41 @@
                   </ui:CommentOut>
                   <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_8" Level="Info" Message="[&quot;Sign-in sequence ended&quot;]" />
                 </Sequence>
-                <Sequence sap:VirtualizedContainerService.HintSize="554,1115" sap2010:WorkflowViewState.IdRef="Sequence_27">
+                <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="680,51" sap2010:WorkflowViewState.IdRef="CommentOut_8">
+                  <ui:CommentOut.Body>
+                    <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="284,238" sap2010:WorkflowViewState.IdRef="Sequence_34">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <Sequence DisplayName="Sequence" sap:VirtualizedContainerService.HintSize="242,114" sap2010:WorkflowViewState.IdRef="Sequence_31">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <Delay DisplayName=" Delay 10 seconds" Duration="00:00:10" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="Delay_1" />
+                      </Sequence>
+                    </Sequence>
+                  </ui:CommentOut.Body>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </ui:CommentOut>
+                <Sequence DisplayName="Sequence" sap:VirtualizedContainerService.HintSize="680,66" sap2010:WorkflowViewState.IdRef="Sequence_44">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <Delay DisplayName=" Delay 3 seconds" Duration="00:00:03" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="Delay_9" />
+                </Sequence>
+                <Sequence sap:VirtualizedContainerService.HintSize="680,66" sap2010:WorkflowViewState.IdRef="Sequence_27">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -366,104 +401,70 @@
                       </ui:Target>
                     </ui:UiElementExists.Target>
                   </ui:UiElementExists>
-                  <If Condition="[bool_googleAcount]" sap:VirtualizedContainerService.HintSize="512,877" sap2010:WorkflowViewState.IdRef="If_5">
+                  <Sequence DisplayName="Sequence" sap:VirtualizedContainerService.HintSize="512,66" sap2010:WorkflowViewState.IdRef="Sequence_46">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <Delay DisplayName=" Delay 3 seconds" Duration="00:00:03" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="Delay_11" />
+                  </Sequence>
+                  <If Condition="[bool_googleAcount]" sap:VirtualizedContainerService.HintSize="512,891" sap2010:WorkflowViewState.IdRef="If_5">
                     <If.Then>
-                      <Sequence sap:VirtualizedContainerService.HintSize="476,690" sap2010:WorkflowViewState.IdRef="Sequence_28">
+                      <Sequence sap:VirtualizedContainerService.HintSize="476,704" sap2010:WorkflowViewState.IdRef="Sequence_28">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" DisplayName="Use Browser Chrome: Google Account" sap:VirtualizedContainerService.HintSize="434,598" sap2010:WorkflowViewState.IdRef="NApplicationCard_4" InteractionMode="DebuggerApi" ScopeGuid="b9714ae6-3f82-4015-b815-dd15fcb0b877" Version="V2">
+                        <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" DisplayName="Use Browser Chrome: Google Account" sap:VirtualizedContainerService.HintSize="434,612" sap2010:WorkflowViewState.IdRef="NApplicationCard_4" InteractionMode="DebuggerApi" ScopeGuid="b9714ae6-3f82-4015-b815-dd15fcb0b877" Version="V2">
                           <uix:NApplicationCard.Body>
                             <ActivityAction x:TypeArguments="x:Object">
                               <ActivityAction.Argument>
                                 <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
                               </ActivityAction.Argument>
-                              <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,382" sap2010:WorkflowViewState.IdRef="Sequence_26">
+                              <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="242,356" sap2010:WorkflowViewState.IdRef="Sequence_26">
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
-                                <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="334,51" sap2010:WorkflowViewState.IdRef="CommentOut_8">
-                                  <ui:CommentOut.Body>
-                                    <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="376,248" sap2010:WorkflowViewState.IdRef="Sequence_31">
-                                      <sap:WorkflowViewStateService.ViewState>
-                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                        </scg:Dictionary>
-                                      </sap:WorkflowViewStateService.ViewState>
-                                      <uix:NClick ClickType="Single" DisplayName="Click 'help_outline'" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NClick_19" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="b9714ae6-3f82-4015-b815-dd15fcb0b877" Version="V1">
-                                        <uix:NClick.Target>
-                                          <uix:TargetAnchorable BrowserURL="https://myaccount.google.com/u/1/?hl=en&amp;utm_source=OGB&amp;utm_medium=act&amp;pli=1" DesignTimeRectangle="1497, 144, 24, 24" ElementType="Icon" FriendlyName="'SVG'" FullSelectorArgument="&lt;webctrl parentid='gbwa' tag='svg' parentclass='gb_A' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='gbwa' tag='svg' type='' class='gb_Ue' aaname='' /&gt;" Guid="9a1f834a-e965-4a5a-81c2-cd89dc9e3ade" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAYAAAByDd+UAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACWSURBVEhL7ZIxCoBADAT9qYWNFhYqWOg/FV8T2YNYLOYgh4roDQRkwQzktpCHycLL+bFwWTcZxjkMvhVvzpjCfpykrOowWKJ4c8YUNm13LMAyxZsz0ZPiRwyfzpMz7ynNXURPetY6b86YQryFlgBLFG/OmMLc0lTeI8RZzlrnzRlTiLfQEmCJ4s0ZU5hbmkoWXs7XhSI7vDttqQs8mYUAAAAASUVORK5CYII=" InformativeScreenshot="746f04f79410366187d92e0aa795218a.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Google Account' /&gt;" SearchSteps="Selector, FuzzySelector" Visibility="Interactive">
-                                            <uix:TargetAnchorable.Anchors>
-                                              <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                                                <uix:Target DesignTimeRectangle="1453, 144, 24, 24" FriendlyName="'help_outline'" FullSelectorArgument="&lt;webctrl tag='I' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='I' type='' class='google-material-icons' aaname='help_outline' check:innerText='help_outline' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAYAAAByDd+UAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJPSURBVEhL7ZbbTxNBFMb9T70gSAultJR7gxXEqiQQqxQwaGKMiQ8GaQoaE2O03KIWFUTFK6CJXaotdNfUNL189hym67bdrVuCfeKXzMuZb/qdOXNmtkdQYw4NDxxThul0Gq9WXsM3Og6bowPHTlpwtK4RFpsDngEvHj56DFlRhLoyFQ1zuRxW197A1eVmg0qj3tKCQHAWqVRKrNbH0JB2dfPWbXU31pY2TE0HEZEkZLNZ1siygsWlp+g9PaAa950ZxM9YjOf10DXMZDK4MxVgMxr+8Ukkk0kxWw4lEJpfRGOzg03PeoeQSCTEbDG6hs/Cy6g71cxmdwNBdUe0uxGfX53rdnsQXn7JpSfW339Ak72NTSev3+DESykzpMPv6z/Hiy5dHuPSEhubW7C1tqulK4zj9VbM3HvAGuJJaJ6TabDa8fbduoj+pcxwbmGJF1CmW1+/cYwy9Y1OsIGr040vG5t8flf8VznmcHVD2o6ylprm/NAIx2lN6S6LDKk0YxPXWEylK4gTsoyuXg/HQ3MLHCMkaRt2ZydONDRhZXVNRMEa0jo7ehCLxUV0jyJDaoz+wQssDs7eF1FjvkcifC9LDan8Vpsz30St+Pjps4juUWQYj+/A2d7Dhs/DL0RUH0X5lS/dMGu9F4fzyf4WM5V/Z1+G0egP7lDS6d0704ZmSqptINLSTksxXVKjptGys7vLnUoabQNpMd00hN61qIaqrgVhdPEL/Oucq774hNHTRlQy3NfTRpCwpo83UdPPU4GafoC11Owvxv/g0PCAAf4A0I4PA43npzIAAAAASUVORK5CYII=" SearchSteps="Selector, FuzzySelector" />
-                                              </scg:List>
-                                            </uix:TargetAnchorable.Anchors>
-                                          </uix:TargetAnchorable>
-                                        </uix:NClick.Target>
-                                      </uix:NClick>
-                                    </Sequence>
-                                  </ui:CommentOut.Body>
+                                <Sequence DisplayName="Sequence" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_45">
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                       <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                                       <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
-                                </ui:CommentOut>
-                                <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'A  https://meet.google....'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_3" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
-                                  <ui:Click.CursorPosition>
-                                    <ui:CursorPosition Position="Center">
-                                      <ui:CursorPosition.OffsetX>
-                                        <InArgument x:TypeArguments="x:Int32" />
-                                      </ui:CursorPosition.OffsetX>
-                                      <ui:CursorPosition.OffsetY>
-                                        <InArgument x:TypeArguments="x:Int32" />
-                                      </ui:CursorPosition.OffsetY>
-                                    </ui:CursorPosition>
-                                  </ui:Click.CursorPosition>
-                                  <ui:Click.Target>
-                                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="e6564763-daff-4e6d-a736-c766277b4ca5" InformativeScreenshot="a6137c73c92f226c75df441e3e594588" Selector="&lt;webctrl name='app' tag='IFRAME' /&gt;&lt;webctrl aaname='Meet' tag='A' href='https://meet.google.com?hs=197&amp;amp;pli=1&amp;amp;authuser=0' /&gt;">
-                                      <ui:Target.TimeoutMS>
-                                        <InArgument x:TypeArguments="x:Int32" />
-                                      </ui:Target.TimeoutMS>
-                                      <ui:Target.WaitForReady>
-                                        <InArgument x:TypeArguments="ui:WaitForReady" />
-                                      </ui:Target.WaitForReady>
-                                    </ui:Target>
-                                  </ui:Click.Target>
-                                </ui:Click>
-                                <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="334,51" sap2010:WorkflowViewState.IdRef="CommentOut_7">
-                                  <ui:CommentOut.Body>
-                                    <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="376,248" sap2010:WorkflowViewState.IdRef="Sequence_30">
-                                      <sap:WorkflowViewStateService.ViewState>
-                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                        </scg:Dictionary>
-                                      </sap:WorkflowViewStateService.ViewState>
-                                      <uix:NClick ClickType="Single" DisplayName="Click 'Meet'" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NClick_20" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="b9714ae6-3f82-4015-b815-dd15fcb0b877" Version="V1">
-                                        <uix:NClick.Target>
-                                          <uix:TargetAnchorable BrowserURL="https://ogs.google.com/u/0/widget/app?origin=https%3A%2F%2Fmyaccount.google.com&amp;cn=app&amp;pid=269&amp;spid=192&amp;hl=en-GB" DesignTimeRectangle="1382, 360, 84, 84" ElementType="Text" FriendlyName="'Meet'" FullSelectorArgument="&lt;webctrl name='app' tag='IFRAME' /&gt;&lt;webctrl aaname='Meet' tag='A' href='https://meet.google.com?hs=197&amp;amp;pli=1&amp;amp;authuser=0' /&gt;" FuzzySelectorArgument="&lt;webctrl name='app' tag='IFRAME' /&gt;&lt;webctrl aaname='Meet' tag='A' type='' class='tX9u1b' check:innerText='Meet' /&gt;" Guid="10765aae-8883-4f3f-9c83-dfeeb03218aa" ImageBase64="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" InformativeScreenshot="0b783173e3d248d8e2976689155b817d.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Google Account' /&gt;" SearchSteps="Selector, FuzzySelector" Visibility="Interactive">
-                                            <uix:TargetAnchorable.Anchors>
-                                              <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                                                <uix:Target DesignTimeRectangle="1541, 95, 32, 32" ElementType="Icon" FriendlyName="'IMG'" FullSelectorArgument="&lt;webctrl tag='IMG' /&gt;" FuzzyMatches="10000" FuzzySelectorArgument="&lt;webctrl tag='IMG' type='' class='gb_Ba gbii' aaname='' /&gt;" ImageBase64="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" SearchSteps="Selector, FuzzySelector" />
-                                              </scg:List>
-                                            </uix:TargetAnchorable.Anchors>
-                                          </uix:TargetAnchorable>
-                                        </uix:NClick.Target>
-                                      </uix:NClick>
-                                    </Sequence>
-                                  </ui:CommentOut.Body>
+                                  <Delay DisplayName=" Delay 10 seconds" Duration="00:00:10" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="Delay_10" />
+                                </Sequence>
+                                <uix:NClick ClickType="Single" DisplayName="Click 'Meet'" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="NClick_21" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="b9714ae6-3f82-4015-b815-dd15fcb0b877" Version="V1">
+                                  <uix:NClick.Target>
+                                    <uix:TargetAnchorable BrowserURL="https://ogs.google.com/u/0/widget/app?origin=https%3A%2F%2Fmyaccount.google.com&amp;cn=app&amp;pid=269&amp;spid=192&amp;hl=en-GB" DesignTimeRectangle="1702, 360, 84, 84" ElementType="Text" FriendlyName="'Meet'" FullSelectorArgument="&lt;webctrl name='app' tag='IFRAME' /&gt;&lt;webctrl aaname='Meet' tag='A' href='https://meet.google.com?hs=197&amp;amp;pli=1&amp;amp;authuser=0' parentclass='j1ei8c' /&gt;" FuzzySelectorArgument="&lt;webctrl name='app' tag='IFRAME' /&gt;&lt;webctrl aaname='Meet' tag='A' type='' class='tX9u1b' check:innerText='Meet' /&gt;" Guid="e715a8da-3401-48d1-9828-e1e009a45af8" ImageBase64="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" InformativeScreenshot="16427bd3f28bf135c6bdb67c4e46ed35.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Google Account' /&gt;" SearchSteps="Selector, FuzzySelector" Visibility="Interactive">
+                                      <uix:TargetAnchorable.Anchors>
+                                        <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                          <uix:Target DesignTimeRectangle="1817, 99, 24, 24" ElementType="Icon" FriendlyName="'SVG'" FullSelectorArgument="&lt;webctrl parentid='gbwa' tag='svg' /&gt;" FuzzyMatches="10000" FuzzySelectorArgument="&lt;webctrl parentid='gbwa' tag='svg' type='' class='gb_Ue' aaname='' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAYAAAByDd+UAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACXSURBVEhL7ZJBCoAgEEW7aYsgooVQCw8X0T3Kw9iMC4PJERwspFw8iA/9B+Nv9sPYN6nC7PxYuKybVbN24Lc0p7BCNWnbdoMDS6Q5hRX2o7oKoEyaU+InhR+R2+kScko5o3mK+EkDq0vNKawQ38KPAEqkOYUV1pVKKUfoThRYXWpOYYX4Fn4EUCLNKaywrlRKFWbn60JjTyX3SPPqt8WYAAAAAElFTkSuQmCC" SearchSteps="Selector, FuzzySelector, Image" />
+                                        </scg:List>
+                                      </uix:TargetAnchorable.Anchors>
+                                    </uix:TargetAnchorable>
+                                  </uix:NClick.Target>
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                       <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                                       <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
-                                </ui:CommentOut>
+                                </uix:NClick>
+                                <Sequence DisplayName="Sequence" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_47">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <Delay DisplayName=" Delay 10 seconds" Duration="00:00:10" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="Delay_12" />
+                                </Sequence>
                               </Sequence>
                             </ActivityAction>
                           </uix:NApplicationCard.Body>
@@ -474,7 +475,7 @@
                       </Sequence>
                     </If.Then>
                     <If.Else>
-                      <Sequence sap2010:WorkflowViewState.IdRef="Sequence_29">
+                      <Sequence sap:VirtualizedContainerService.HintSize="200,83" sap2010:WorkflowViewState.IdRef="Sequence_29">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -483,6 +484,40 @@
                       </Sequence>
                     </If.Else>
                   </If>
+                </Sequence>
+                <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="680,51" sap2010:WorkflowViewState.IdRef="CommentOut_11">
+                  <ui:CommentOut.Body>
+                    <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="284,238" sap2010:WorkflowViewState.IdRef="Sequence_37">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <Sequence DisplayName="Sequence" sap:VirtualizedContainerService.HintSize="242,114" sap2010:WorkflowViewState.IdRef="Sequence_32">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <Delay DisplayName=" Delay 10 seconds" Duration="00:00:10" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="Delay_2" />
+                      </Sequence>
+                    </Sequence>
+                  </ui:CommentOut.Body>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </ui:CommentOut>
+                <Sequence DisplayName="Sequence" sap:VirtualizedContainerService.HintSize="680,66" sap2010:WorkflowViewState.IdRef="Sequence_48">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <Delay DisplayName=" Delay 5 seconds" Duration="00:00:05" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="Delay_13" />
                 </Sequence>
                 <ui:UiElementExists DisplayName="Element Exists 'DIV'" Exists="[isLoggedIn]" sap:VirtualizedContainerService.HintSize="680,106" sap2010:WorkflowViewState.IdRef="UiElementExists_6">
                   <ui:UiElementExists.Target>
@@ -496,9 +531,17 @@
                     </ui:Target>
                   </ui:UiElementExists.Target>
                 </ui:UiElementExists>
-                <If Condition="[isLoggedIn]" sap:VirtualizedContainerService.HintSize="680,342" sap2010:WorkflowViewState.IdRef="If_1">
+                <Sequence DisplayName="Sequence" sap:VirtualizedContainerService.HintSize="680,116" sap2010:WorkflowViewState.IdRef="Sequence_41">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <Delay DisplayName=" Delay 1 second" Duration="00:00:01" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="Delay_7" />
+                </Sequence>
+                <If Condition="[isLoggedIn]" sap:VirtualizedContainerService.HintSize="680,344" sap2010:WorkflowViewState.IdRef="If_1">
                   <If.Then>
-                    <Sequence DisplayName="Signed in successfull" sap:VirtualizedContainerService.HintSize="376,183" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                    <Sequence DisplayName="Signed in successfull" sap:VirtualizedContainerService.HintSize="376,185" sap2010:WorkflowViewState.IdRef="Sequence_8">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
